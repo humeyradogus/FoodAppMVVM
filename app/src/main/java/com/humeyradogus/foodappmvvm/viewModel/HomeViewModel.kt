@@ -11,7 +11,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class HomeViewmodel():ViewModel() {
+class HomeViewModel():ViewModel() {
     private var randomMealLiveData = MutableLiveData<Meal>()
 
     fun getRandomMeal(){
