@@ -1,19 +1,18 @@
 package com.humeyradogus.foodappmvvm.adapters
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.humeyradogus.foodappmvvm.databinding.PopularItemsBinding
-import com.humeyradogus.foodappmvvm.pojo.CategoryMeals
-import com.humeyradogus.foodappmvvm.pojo.Meal
+import com.humeyradogus.foodappmvvm.pojo.MealsByCategory
 
 
 class MostPopularAdapter : RecyclerView.Adapter<MostPopularAdapter.PopularMealViewHolder>(){
-    private var mealsList: ArrayList<CategoryMeals> = ArrayList()
+    private var mealsList: ArrayList<MealsByCategory> = ArrayList()
+    lateinit var onItemClick: ((MealsByCategory) -> Unit)
 
-    fun setMealList(mealsList: ArrayList<CategoryMeals>) {
+    fun setMealList(mealsList: ArrayList<MealsByCategory>) {
         this.mealsList = mealsList
         notifyDataSetChanged()
     }
@@ -29,6 +28,10 @@ class MostPopularAdapter : RecyclerView.Adapter<MostPopularAdapter.PopularMealVi
         Glide.with(holder.itemView)
             .load(mealsList[position].strMealThumb)
             .into(holder.binding.imgPopularMealItem)
+
+        holder.itemView.setOnClickListener{
+            onItemClick.invoke(mealsList[position])
+        }
     }
 
     override fun getItemCount(): Int {
