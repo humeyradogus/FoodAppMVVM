@@ -109,34 +109,27 @@
                 android:id="@+id/tv_categories"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="1sp"
                 android:text="Categories"
+                android:layout_marginTop="18sp"
                 android:textColor="@color/black"
                 android:textSize="17sp"
                 android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="@+id/cardView2"
+                app:layout_constraintStart_toStartOf="@+id/tv_over_popular"
                 app:layout_constraintTop_toBottomOf="@+id/rec_view_meals_popular" />
 
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cardView2"
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rec_view_categories"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:scrollbars="none"
                 android:layout_marginStart="25dp"
-                android:layout_marginTop="10sp"
                 android:layout_marginEnd="25dp"
-                app:cardCornerRadius="10dp"
-                app:cardUseCompatPadding="true"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_categories">
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/rec_view_meals_popular"
+                app:layout_constraintTop_toBottomOf="@+id/tv_categories" />
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rec_view_categories"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:scrollbars="none" />
 
-            </androidx.cardview.widget.CardView>
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
