@@ -22,7 +22,6 @@ class categoriesFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         homeMvvm = ViewModelProvider(this).get(HomeViewModel::class.java)
-
     }
 
     override fun onCreateView(
@@ -42,6 +41,7 @@ class categoriesFragment : Fragment() {
 
         onCategoryClick()
     }
+
     private fun onCategoryClick() {
         categoriesAdapter.onıtemClick = { category ->
             val intent = Intent(activity, CategoryMealsActivity::class.java)
@@ -63,7 +63,4 @@ class categoriesFragment : Fragment() {
             adapter = categoriesAdapter
         }
     }
-
-
-
 }

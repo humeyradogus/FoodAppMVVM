@@ -27,8 +27,6 @@ class SearchFragment : Fragment() {
         super.onCreate(savedInstanceState)
 
         viewModel = ViewModelProvider(this).get(SearchViewModel::class.java)
-
-
     }
 
     override fun onCreateView(
@@ -37,17 +35,13 @@ class SearchFragment : Fragment() {
     ): View? {
         binding = FragmentSearchBinding.inflate(inflater)
         return binding.root
-
-
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         prepareRecyclerView()
-
         observeSearchedMealsLiveData()
-
 
         var searchJob: Job?= null
         binding.edSearch.addTextChangedListener { searchQuery ->
@@ -56,7 +50,6 @@ class SearchFragment : Fragment() {
                 delay(500)
                 viewModel.searchMeals(searchQuery.toString())
             }
-
         }
     }
 
@@ -66,15 +59,15 @@ class SearchFragment : Fragment() {
         })
     }
 
-    private fun searchMeals() {
-        val searchQuery = binding.edSearch.text.toString()
-        if (searchQuery.isNotEmpty()){
-            viewModel.searchMeals(searchQuery)
-        }
-        else{
-            Toast.makeText(context, "Please enter a meal name to search!", Toast.LENGTH_SHORT).show()
-        }
-    }
+    //private fun searchMeals() {
+    //    val searchQuery = binding.edSearch.text.toString()
+    //    if (searchQuery.isNotEmpty()){
+    //        viewModel.searchMeals(searchQuery)
+    //    }
+    //    else{
+    //        Toast.makeText(context, "Please enter a meal name to search!", Toast.LENGTH_SHORT).show()
+    //    }
+    //}
 
     private fun prepareRecyclerView() {
         searchRecyclerviewAdapter = SearchedMealsAdapter()
@@ -82,8 +75,5 @@ class SearchFragment : Fragment() {
             layoutManager = LinearLayoutManager(context)
             adapter = searchRecyclerviewAdapter
         }
-
     }
-    
-
 }

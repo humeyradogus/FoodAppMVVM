@@ -53,6 +53,7 @@ class MealActivity : AppCompatActivity() {
                 val meal = t
 
                 onResponseCase()
+
                 binding.tvCategory.text = "Category: ${meal!!.strMeal}"
                 binding.tvArea.text = "Area: ${meal!!.strArea}"
                 binding.tvInstructionsSteps.text = meal!!.strInstructions
@@ -86,7 +87,6 @@ class MealActivity : AppCompatActivity() {
         binding.tvArea.visibility = View.INVISIBLE
         binding.tvCategory.visibility = View.INVISIBLE
         binding.imgYoutube.visibility = View.INVISIBLE
-
     }
 
     private fun onResponseCase(){

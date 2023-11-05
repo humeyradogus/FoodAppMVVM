@@ -26,5 +26,4 @@ interface MealApi {
 
     @GET("search.php")
     fun searchMeals(@Query("s") searchQuery:String):Call<MealList>
-
 }

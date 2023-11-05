@@ -41,5 +41,4 @@ class CategoriesAdapter():RecyclerView.Adapter<CategoriesAdapter.CategoryViewHol
     override fun getItemCount(): Int {
         return categoriesList.size
     }
-
 }

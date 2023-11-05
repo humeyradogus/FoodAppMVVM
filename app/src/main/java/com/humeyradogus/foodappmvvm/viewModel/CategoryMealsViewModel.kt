@@ -21,14 +21,12 @@ class CategoryMealsViewModel: ViewModel() {
                 response.body()?.let{ mealsList ->
                     mealsLiveData.postValue(mealsList.meals)
                     //Log.d("TEST","Meal id ${randomMeal.idMeal} name ${randomMeal.strMeal}")
-
                 }
             }
 
             override fun onFailure(call: Call<MealsByCategoryList>, t: Throwable) {
                 Log.d("CategoryMealsViewModel",t.message.toString())
             }
-
         })
     }
 

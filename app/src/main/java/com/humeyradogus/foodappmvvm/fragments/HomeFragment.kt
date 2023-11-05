@@ -136,5 +136,4 @@ class HomeFragment : Fragment() {
             this.randomMeal = meal
         }
     }
-
 }

@@ -8,14 +8,14 @@ import com.humeyradogus.foodappmvvm.databinding.MealItemBinding
 import com.humeyradogus.foodappmvvm.pojo.MealsByCategory
 
 class CategoryMealsAdapter() : RecyclerView.Adapter<CategoryMealsAdapter.CategoryMealsViewModel>(){
+    inner class CategoryMealsViewModel(val binding: MealItemBinding):RecyclerView.ViewHolder(binding.root)
+
     private var mealsList = ArrayList<MealsByCategory>()
 
     fun setMealsList(mealsList: List<MealsByCategory>){
         this.mealsList = mealsList as ArrayList<MealsByCategory>
         notifyDataSetChanged()
     }
-
-    inner class CategoryMealsViewModel(val binding: MealItemBinding):RecyclerView.ViewHolder(binding.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CategoryMealsViewModel {
         return CategoryMealsViewModel(MealItemBinding.inflate(LayoutInflater.from(parent.context)))

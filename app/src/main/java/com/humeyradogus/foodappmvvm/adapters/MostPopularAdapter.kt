@@ -9,6 +9,8 @@ import com.humeyradogus.foodappmvvm.pojo.MealsByCategory
 
 
 class MostPopularAdapter : RecyclerView.Adapter<MostPopularAdapter.PopularMealViewHolder>(){
+    class PopularMealViewHolder(val binding: PopularItemsBinding) : RecyclerView.ViewHolder(binding.root)
+
     private var mealsList: ArrayList<MealsByCategory> = ArrayList()
     lateinit var onItemClick: ((MealsByCategory) -> Unit)
 
@@ -16,9 +18,6 @@ class MostPopularAdapter : RecyclerView.Adapter<MostPopularAdapter.PopularMealVi
         this.mealsList = mealsList
         notifyDataSetChanged()
     }
-
-    class PopularMealViewHolder(val binding: PopularItemsBinding) : RecyclerView.ViewHolder(binding.root)
-
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PopularMealViewHolder {
         return PopularMealViewHolder(PopularItemsBinding.inflate(LayoutInflater.from(parent.context),parent,false))

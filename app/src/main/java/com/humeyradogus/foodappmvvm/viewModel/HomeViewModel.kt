@@ -21,7 +21,6 @@ class HomeViewModel():ViewModel() {
                 if(response.body() != null){
                     randomMealLiveData.value = response.body()!!.meals[0]
                     //Log.d("TEST","Meal id ${randomMeal.idMeal} name ${randomMeal.strMeal}")
-
                 }else{
                     return
                 }
@@ -30,7 +29,6 @@ class HomeViewModel():ViewModel() {
             override fun onFailure(call: Call<MealList>, t: Throwable) {
                 Log.d("HomeFragment",t.message.toString())
             }
-
         })
     }
 
@@ -40,7 +38,6 @@ class HomeViewModel():ViewModel() {
                 if(response.body() != null){
                     popularItemsLiveData.value = response.body()!!.meals
                     //Log.d("TEST","Meal id ${randomMeal.idMeal} name ${randomMeal.strMeal}")
-
                 }else{
                     return
                 }
@@ -49,7 +46,6 @@ class HomeViewModel():ViewModel() {
             override fun onFailure(call: Call<MealsByCategoryList>, t: Throwable) {
                 Log.d("HomeFragment",t.message.toString())
             }
-
         })
     }
 
@@ -59,7 +55,6 @@ class HomeViewModel():ViewModel() {
                 response.body()?.let{ categoryList ->
                     categoriesLiveData.postValue(categoryList.categories)
                     //Log.d("TEST","Meal id ${randomMeal.idMeal} name ${randomMeal.strMeal}")
-
                 }
             }
 
@@ -75,14 +70,10 @@ class HomeViewModel():ViewModel() {
     }
 
     fun observePopularItemsLiveData():LiveData<List<MealsByCategory>>{
-        // live data cannot be changed that's why we return with this func
         return popularItemsLiveData
     }
 
     fun observeCategoriesLiveData(): LiveData<List<Category>> {
-        // live data cannot be changed that's why we return with this func
         return categoriesLiveData
     }
 }
-
-

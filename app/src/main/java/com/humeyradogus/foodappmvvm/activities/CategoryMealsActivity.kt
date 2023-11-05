@@ -29,7 +29,6 @@ class CategoryMealsActivity : AppCompatActivity() {
         categoryMealsViewModel.observeMealsLiveData().observe(this, Observer { mealsList ->
             binding.tvCategoryCount.text = "Total recipe count in this category is ${mealsList.size.toString()}"
             categoryMealsAdapter.setMealsList(mealsList)
-
         })
     }
 
