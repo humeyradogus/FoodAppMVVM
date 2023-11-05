@@ -38,13 +38,6 @@
                     android:textSize="25sp"
                     android:textStyle="bold" />
 
-                <ImageView
-                    android:id="@+id/img_search"
-                    android:layout_width="30dp"
-                    android:layout_height="match_parent"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/ic_search" />
-
             </LinearLayout>
 
             <TextView

@@ -23,7 +23,6 @@ class MealActivity : AppCompatActivity() {
     private lateinit var youtubeLink: String
     private lateinit var mealMvvm: MealViewModel
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMealBinding.inflate(layoutInflater)
@@ -83,7 +82,6 @@ class MealActivity : AppCompatActivity() {
 
     private fun loadingCase(){
         binding.progressBar.visibility = View.VISIBLE
-        binding.btnAddToFavorites.visibility = View.INVISIBLE
         binding.tvInstructions.visibility = View.INVISIBLE
         binding.tvArea.visibility = View.INVISIBLE
         binding.tvCategory.visibility = View.INVISIBLE
@@ -93,7 +91,6 @@ class MealActivity : AppCompatActivity() {
 
     private fun onResponseCase(){
         binding.progressBar.visibility = View.INVISIBLE
-        binding.btnAddToFavorites.visibility = View.VISIBLE
         binding.tvInstructions.visibility = View.VISIBLE
         binding.tvArea.visibility = View.VISIBLE
         binding.tvCategory.visibility = View.VISIBLE
