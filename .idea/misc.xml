@@ -4,6 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable/cardview_border.xml" value="0.1215" />
+        <entry key="app/src/main/res/drawable/ic_category.xml" value="0.188" />
+        <entry key="app/src/main/res/drawable/ic_favorites.xml" value="0.188" />
+        <entry key="app/src/main/res/drawable/ic_home.xml" value="0.188" />
         <entry key="app/src/main/res/drawable/search_box_background.xml" value="0.187" />
         <entry key="app/src/main/res/font/fonts.xml" value="0.2557291666666667" />
         <entry key="app/src/main/res/layout/activity_category_meals.xml" value="0.22395833333333334" />
@@ -13,7 +16,7 @@
         <entry key="app/src/main/res/layout/fragment_categories.xml" value="0.22509057971014493" />
         <entry key="app/src/main/res/layout/fragment_favorites.xml" value="0.233270263671875" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.22509057971014493" />
-        <entry key="app/src/main/res/layout/fragment_search.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_search.xml" value="0.11604095563139932" />
         <entry key="app/src/main/res/layout/meal_item.xml" value="0.23854166666666668" />
         <entry key="app/src/main/res/layout/popular_items.xml" value="0.14479166666666668" />
         <entry key="app/src/main/res/layout/searched_meal_item.xml" value="0.23854166666666668" />

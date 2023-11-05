@@ -9,11 +9,9 @@ import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
-import com.humeyradogus.foodappmvvm.R
 import com.humeyradogus.foodappmvvm.activities.CategoryMealsActivity
 import com.humeyradogus.foodappmvvm.adapters.CategoriesAdapter
 import com.humeyradogus.foodappmvvm.databinding.FragmentCategoriesBinding
-import com.humeyradogus.foodappmvvm.databinding.FragmentHomeBinding
 import com.humeyradogus.foodappmvvm.viewModel.HomeViewModel
 
 class categoriesFragment : Fragment() {

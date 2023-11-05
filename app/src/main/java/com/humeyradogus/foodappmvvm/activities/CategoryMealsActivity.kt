@@ -1,16 +1,12 @@
 package com.humeyradogus.foodappmvvm.activities
 
-import android.os.Binder
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.GridLayoutManager
-import com.humeyradogus.foodappmvvm.R
 import com.humeyradogus.foodappmvvm.adapters.CategoryMealsAdapter
 import com.humeyradogus.foodappmvvm.databinding.ActivityCategoryMealsBinding
-import com.humeyradogus.foodappmvvm.databinding.ActivityMealBinding
 import com.humeyradogus.foodappmvvm.fragments.HomeFragment
 import com.humeyradogus.foodappmvvm.viewModel.CategoryMealsViewModel
 

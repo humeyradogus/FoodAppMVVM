@@ -4,7 +4,6 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.humeyradogus.foodappmvvm.pojo.Meal
 import com.humeyradogus.foodappmvvm.pojo.MealsByCategory
 import com.humeyradogus.foodappmvvm.pojo.MealsByCategoryList
 import com.humeyradogus.foodappmvvm.retrofit.RetrofitInstance
