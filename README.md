@@ -5,7 +5,7 @@ A Simple Food App
 **- Retrofit**
 **- Navigation**
 
-
+----------------------------------------------------------------------------
 This application is a simple recipe application.
 This project was coded using The Meal Api (https://www.themealdb.com/api.php). With **Retrofit**, data was pulled from the API and reflected on the user interface. Also, benefited from **MVVM architecture**.
 
