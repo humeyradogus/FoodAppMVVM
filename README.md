@@ -1,8 +1,9 @@
 # FoodAppMVVM
 A Simple Food App
-**- MVVM
-- Retrofit
-- Navigation**
+
+**- MVVM**
+**- Retrofit**
+**- Navigation**
 
 
 This application is a simple recipe application.
